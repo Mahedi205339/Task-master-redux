@@ -48,7 +48,7 @@ const AddTaskModal = ({ isOpen, setIsOpen }) => {
                     <label className="mb-2 font-bold" htmlFor="title">Assign to</label>
                     <select
                         className="w-full rounded-md"
-                        type="date" {...register('assignTo', { require: true })} >
+                        type="date" {...register('assignedTo', { require: true })} >
                         <option value="Mahedi Hasan">Mahedi Hasan</option>
                         <option value="Doreamon">Doreamon</option>
                         <option value="Nobita">Nobita</option>
@@ -61,9 +61,9 @@ const AddTaskModal = ({ isOpen, setIsOpen }) => {
                     <select
                         className="w-full rounded-md"
                         type="date" {...register('priority', { require: true })} >
-                        <option value="Low">low</option>
-                        <option value="Medium">Medium</option>
-                        <option value="High">High</option>
+                        <option value="low">low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
                     </select>
                 </div>
                 <div className="flex gap-3 justify-end text-white font-semibold">

@@ -10,6 +10,7 @@ const taskSlice = createSlice({
     reducers: {
 
         addTask: (state, { payload }) => {
+             console.log(payload);
 
             if (state.tasks.length === 0) {
                 state.tasks.push({ id: 1, status: 'pending', ...payload })
@@ -22,11 +23,15 @@ const taskSlice = createSlice({
                 })
             }
         },
-        removeTask: (state, payload) => {
+        removeTask: (state, { payload }) => {
             state.tasks.filter((item) => item.id !== payload);
+        },
+        updateStatus: (state, { payload }) => {
+            const target = state.tasks.find(item => item.id === payload);
+            target.status = 'running'
         }
 
     }
 });
-export const { addTask } = taskSlice.actions;
+export const { addTask, removeTask, updateStatus } = taskSlice.actions;
 export default taskSlice.reducer
