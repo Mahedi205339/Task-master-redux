@@ -4,7 +4,9 @@ import { removeTask, updateStatus } from '../../redux/features/Tasks/taskSlice';
 
 const TaskCard = ({ task }) => {
 
-  console.log(task);
+  // console.log(task);
+
+  // // console.log(task);
   // const task = {
   //   id: 1,
   //   status: 'pending',
@@ -54,7 +56,7 @@ const TaskCard = ({ task }) => {
           </button>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
