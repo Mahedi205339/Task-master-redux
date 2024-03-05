@@ -4,6 +4,8 @@ import { removeTask, updateStatus } from '../../redux/features/Tasks/taskSlice';
 
 const TaskCard = ({ task }) => {
 
+  // console.log(task.priority);
+
   // console.log(task);
 
   // // console.log(task);
